@@ -1,3 +1,4 @@
+import os
 import streamlit as st  # Importing the Streamlit library for creating the web application
 import speech_recognition as sr  # Importing the SpeechRecognition library for speech recognition capabilities
 import pygame  # Importing the Pygame library for playing startup tone
