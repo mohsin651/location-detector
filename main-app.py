@@ -2,7 +2,7 @@ import os
 import streamlit as st  # Importing the Streamlit library for creating the web application
 import speech_recognition as sr  # Importing the SpeechRecognition library for speech recognition capabilities
 import pygame  # Importing the Pygame library for playing startup tone
-import pyttsx3  # Importing the pyttsx3 library for text-to-speech conversion
+# import pyttsx3  # Importing the pyttsx3 library for text-to-speech conversion
 
 def play_startup_tone():  # Function to play the startup tone sound
     pygame.mixer.init()  # Initialize the Pygame mixer
@@ -32,12 +32,12 @@ def extract_lat_long_from_text(text):  # Function to extract latitude and longit
     
     return latitude, longitude  # Return the extracted latitude and longitude
 
-def speak_message(message):  # Function to speak a given message using text-to-speech
-    engine = pyttsx3.init()  # Initialize the pyttsx3 engine for text-to-speech
-    engine.setProperty('rate', 150)  # Set the speech rate to 150 (you can adjust this value)
-    engine.setProperty('volume', 0.8)  # Set the speech volume to 0.8 (you can adjust this value)
-    engine.say(message)  # Queue the message for speech output
-    engine.runAndWait()  # Wait for the speech output to complete
+# def speak_message(message):  # Function to speak a given message using text-to-speech
+#     engine = pyttsx3.init()  # Initialize the pyttsx3 engine for text-to-speech
+#     engine.setProperty('rate', 150)  # Set the speech rate to 150 (you can adjust this value)
+#     engine.setProperty('volume', 0.8)  # Set the speech volume to 0.8 (you can adjust this value)
+#     engine.say(message)  # Queue the message for speech output
+#     engine.runAndWait()  # Wait for the speech output to complete
 
 def main():  # Main function to run the Streamlit application
     st.title("Latitude and Longitude Detection")  # Set the title of the application
@@ -48,7 +48,7 @@ def main():  # Main function to run the Streamlit application
     longitude_output = st.empty()  # Create an empty output placeholder for longitude
 
     if start_button:  # If the "Start" button is clicked
-        speak_message("Please speak your location in terms of latitude and longitude. Thank you.")  # Speak a message
+        # speak_message("Please speak your location in terms of latitude and longitude. Thank you.")  # Speak a message
         play_startup_tone()  # Play the startup tone
         audio = record_audio()  # Record audio from the microphone
         recognizer = sr.Recognizer()  # Create a Recognizer object for speech recognition
