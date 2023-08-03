@@ -1,4 +1,3 @@
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 import os
 import streamlit as st  # Importing the Streamlit library for creating the web application
 import speech_recognition as sr  # Importing the SpeechRecognition library for speech recognition capabilities
@@ -78,7 +77,6 @@ def main():
 
             except sr.UnknownValueError:
                 pass
-
 
 if __name__ == "__main__":
     main()  # Run the main function when the script is executed
